@@ -1,23 +1,9 @@
 
     var submitButton = document.getElementById("submitButton");
-    submitButton.addEventListener("click", passwordGeneration, false)
+    submitButton.addEventListener("click", passwordGeneration)
 
 
-
-
-
-
-function passwordGeneration(){
-    /**
-     * Variables
-     */
-    
-    var specialCharQuestion = confirm("Do you want special characters?");
-    var numberCharQuestion = confirm("Do you want numbers?");
-    var lowercaseCharQuestion = confirm("Do you want lowercase?");
-    var uppercaseCharQuestion = confirm("Do you want lowercase?");
-    
-    var passwordLengthQuestion = prompt("How many characters would you like the password?");
+    var specialCharQuestion, numberCharQuestion, lowercaseCharQuestion, uppercaseCharQuestion, passwordLengthQuestion;
     
     
     var charObject = {
@@ -34,8 +20,53 @@ function passwordGeneration(){
             uppercaseChar: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
         }
     }
-    passwordLengthQuestion    
-    console.log(passwordLengthQuestion)  
-    return passwordLengthQuestion 
+    
+
+
+    function passwordGeneration(){
+        /**
+         * Variables
+         */
+        
+            
+    askingTheQuestions();
+
+        
 
 }
+
+function askingTheQuestions(){
+        
+    passwordLengthQuestion = prompt("How many characters would you like the password?");
+    let passwordLengthQuestionInt = parseInt(passwordLengthQuestion);
+        console.log(passwordLengthQuestion)
+        console.log(passwordLengthQuestionInt)
+
+        if(passwordLengthQuestionInt >= 8 || passwordLengthQuestionInt <= 128)
+
+
+
+    // switch(passwordLengthQuestionInt){
+    //         specialCharQuestion = confirm("Do you want special characters?");
+    //         numberCharQuestion = confirm("Do you want numbers?");
+    //         lowercaseCharQuestion = confirm("Do you want lowercase?");
+    //         uppercaseCharQuestion = confirm("Do you want lowercase?");
+    // break;
+    //     case passwordLengthQuestionInt < 8 || passwordLengthQuestionInt > 128:
+    //         alert("Please pick a number between 8 and 128");
+    //         passwordLengthQuestion;           
+    //     break;
+    //     default:
+    //         passwordLengthQuestion;
+    //     break;
+    //     } 
+}
+
+
+
+
+function creatingPassword(){
+    emptyPasswordArray = []
+
+}
+
